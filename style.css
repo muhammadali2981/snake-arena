@@ -1,0 +1,130 @@
+body{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url(asset/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+  /* Board */
+.board {
+  width: 80vmin;
+  height: 80vmin;
+   margin-top: 5%; 
+  opacity: 0;
+  background: radial-gradient(circle at center, #000000, #050505, #0a0a0a);
+  border: 2px solid #00ff99;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 255, 150, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+/* Scoreboard */
+.score-board {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 0 8px #00ff88;
+  opacity: 0;
+}
+
+button{
+
+  border: none;
+  padding: 2px 5px;
+  background-color: #0066ff;
+  color: wheat;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+.score.glow {
+  color: #00ffcc;
+  text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc;
+}
+
+/* Overlay for Game Over */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-size: 28px;
+  z-index: 20;
+}
+
+.overlay button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  background: #00ff88;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.overlay button:hover {
+  background: #00cc66;
+}
+
+/* Snake Head */
+.head {
+  background: linear-gradient(45deg, #00ffcc, #00ff66);
+  border-radius: 25%;
+  box-shadow: 0 0 15px #00ffcc, 0 0 25px #00ff66;
+  transition: all 0.1s ease-in-out;
+}
+
+/* Snake Body */
+.snake {
+  background: linear-gradient(45deg, #0099ff, #0066ff);
+  border-radius: 35%;
+  box-shadow: 0 0 10px #00ccff, 0 0 20px #0099ff;
+  transition: all 0.15s ease-in-out;
+}
+
+/* Food (changes shape/color dynamically with JS) */
+.food {
+  /* background: radial-gradient(circle, yellow, orange, red); */
+  border-radius: 50%;
+  text-shadow: 0 0 15px yellow, 0 0 25px orange;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.9); }
+  100% { transform: scale(1.1); }
+}
+
+/* Scoreboard */
+.score-board {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.6);
+  color: #00ffcc;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #00ff99;
+  box-shadow: 0 0 10px #00ffcc;
+}
