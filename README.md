@@ -4,9 +4,9 @@ A sleek, modern version of the classic Snake game built with **HTML**, **CSS**, 
 Eat food to grow, avoid collisions, and chase your high score in a smooth, responsive environment.
 
 ## 🚀 Live Demo  
-Try it live here: **[Your Live Demo Link](https://your-demo-url.com)**  
+Try it live here: **[Your Live Demo Link](https://muhammadali2981.github.io/snake-arena/)**  
 
-> *(Replace the above link with your deployed version — Netlify, Vercel, GitHub Pages, etc.)*
+
 
 ---
 
